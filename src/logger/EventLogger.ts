@@ -181,24 +181,15 @@ class EventLogger {
 
         // Append to file
         fs.appendFileSync(csvPath, csvRows, 'utf8');
-    }
-
-    /**
+    }    /**
      * Write events to YAML file (append mode)
      */
     private writeYAMLFile(outputPath: string): void {
         const yamlPath = outputPath.replace(/\.json$/, '.yaml');
         
-        // Simple YAML formatting (without external dependencies)
+        // Proper YAML formatting with nested object support
         const yamlContent = this.eventBuffer.map(event => {
-            return [
-                `- timestamp: "${event.timestamp}"`,
-                `  type: "${event.type}"`,
-                `  data:`,
-                ...Object.entries(event.data).map(([key, value]) => 
-                    `    ${key}: ${typeof value === 'string' ? `"${value}"` : value}`
-                )
-            ].join('\n');
+            return this.formatYAMLEvent(event, 0);
         }).join('\n');
 
         // Append to file
@@ -207,6 +198,59 @@ class EventLogger {
         } else {
             fs.writeFileSync(yamlPath, yamlContent, 'utf8');
         }
+    }
+
+    /**
+     * Format a single event as YAML with proper nesting
+     */
+    private formatYAMLEvent(event: LogEvent, baseIndent: number): string {
+        const indent = '  '.repeat(baseIndent);
+        const dataIndent = '  '.repeat(baseIndent + 1);
+        
+        let yamlLines = [
+            `${indent}- timestamp: "${event.timestamp}"`,
+            `${indent}  type: "${event.type}"`,
+            `${indent}  data:`
+        ];
+        
+        yamlLines.push(...this.formatYAMLObject(event.data, baseIndent + 2));
+        
+        return yamlLines.join('\n');
+    }
+
+    /**
+     * Recursively format an object as YAML
+     */
+    private formatYAMLObject(obj: any, indentLevel: number): string[] {
+        const indent = '  '.repeat(indentLevel);
+        const lines: string[] = [];
+        
+        for (const [key, value] of Object.entries(obj)) {
+            if (value === null || value === undefined) {
+                lines.push(`${indent}${key}: null`);
+            } else if (typeof value === 'string') {
+                lines.push(`${indent}${key}: "${value}"`);
+            } else if (typeof value === 'number' || typeof value === 'boolean') {
+                lines.push(`${indent}${key}: ${value}`);
+            } else if (Array.isArray(value)) {
+                lines.push(`${indent}${key}:`);
+                value.forEach((item, index) => {
+                    if (typeof item === 'object' && item !== null) {
+                        lines.push(`${indent}  - `);
+                        lines.push(...this.formatYAMLObject(item, indentLevel + 2).map(line => line.replace(/^  /, '    ')));
+                    } else {
+                        lines.push(`${indent}  - ${typeof item === 'string' ? `"${item}"` : item}`);
+                    }
+                });
+            } else if (typeof value === 'object' && value !== null) {
+                lines.push(`${indent}${key}:`);
+                lines.push(...this.formatYAMLObject(value, indentLevel + 1));
+            } else {
+                lines.push(`${indent}${key}: ${value}`);
+            }
+        }
+        
+        return lines;
     }
 
     /**
