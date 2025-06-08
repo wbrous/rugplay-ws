@@ -147,9 +147,9 @@ node tests/test-sdk.js
 
 ## 📚 Documentation
 
-- 📖 [SDK Usage Guide](./SDK_USAGE.md)
-- 🚀 [Project Status](./PROJECT_STATUS.md)
-- 🔔 [Discord Setup](./DISCORD_SETUP.md)
+- 📖 [SDK Usage Guide](./docs/SDK_USAGE.md)
+- 🚀 [Project Status](./docs/PROJECT_STATUS.md)
+- 🔔 [Discord Setup](./docs/DISCORD_SETUP.md)
 
 ---
 
