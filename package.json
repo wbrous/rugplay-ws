@@ -1,0 +1,32 @@
+{
+  "name": "rugplay-logger",
+  "version": "1.0.0",
+  "description": "A TypeScript project for logging Rugplay WebSocket events",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "clean": "rimraf dist",
+    "bun-start": "bun run src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.12.12",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  },
+  "keywords": [
+    "rugplay",
+    "websocket",
+    "logger",
+    "bun"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "ts-node": "^10.9.2",
+    "ws": "^8.18.2"
+  }
+}

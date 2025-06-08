@@ -1,0 +1,2535 @@
+[
+  {
+    "timestamp": "2025-06-08T21:42:12.451Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1587",
+        "username": "dougdougholdings",
+        "avatar_url": "https://rugplay.com/avatars/1587.jpg"
+      },
+      "coin": {
+        "symbol": "DUMBEST",
+        "name": "IAmWithStupid",
+        "icon_url": "https://rugplay.com/coins/dumbest.jpg"
+      },
+      "transaction": {
+        "amount": 2289.94059952721,
+        "amount_formatted": "2.29K",
+        "price_per_unit": 0.04369015720125771,
+        "price_formatted": "$0.04369016",
+        "total_value": 100,
+        "total_value_formatted": "$100.00"
+      },
+      "timestamp": 1749418932492,
+      "timestamp_iso": "2025-06-08T21:42:12.492Z",
+      "timestamp_human": "6/8/2025, 4:42:12 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:42:12.451Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:42:21.465Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1587",
+        "username": "dougdougholdings",
+        "avatar_url": "https://rugplay.com/avatars/1587.jpg"
+      },
+      "coin": {
+        "symbol": "TTC",
+        "name": "Turtlecoin",
+        "icon_url": "https://rugplay.com/coins/ttc.png"
+      },
+      "transaction": {
+        "amount": 490274.40454593766,
+        "amount_formatted": "490.27K",
+        "price_per_unit": 0.017147931176941248,
+        "price_formatted": "$0.01714793",
+        "total_value": 7900,
+        "total_value_formatted": "$7900.00"
+      },
+      "timestamp": 1749418941510,
+      "timestamp_iso": "2025-06-08T21:42:21.510Z",
+      "timestamp_human": "6/8/2025, 4:42:21 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T21:42:21.465Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:42:21.558Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "dougdougholdings",
+      "userImage": "avatars/1587.jpg",
+      "amount": 490274.40454593766,
+      "coinSymbol": "TTC",
+      "coinName": "Turtlecoin",
+      "coinIcon": "coins/ttc.png",
+      "totalValue": 7900,
+      "price": 0.017147931176941248,
+      "timestamp": 1749418941510,
+      "userId": "1587",
+      "formatted_timestamp": "2025-06-08T21:42:21.510Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:42:54.647Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4184",
+        "username": "goofy",
+        "avatar_url": "https://rugplay.com/avatars/116754019326769257389.png"
+      },
+      "coin": {
+        "symbol": "RVR",
+        "name": "Rover",
+        "icon_url": "https://rugplay.com/coins/rvr.jpg"
+      },
+      "transaction": {
+        "amount": 2912.4767615,
+        "amount_formatted": "2.91K",
+        "price_per_unit": 0.0031069963038718594,
+        "price_formatted": "$0.00310700",
+        "total_value": 9.05052340002294,
+        "total_value_formatted": "$9.05"
+      },
+      "timestamp": 1749418974692,
+      "timestamp_iso": "2025-06-08T21:42:54.692Z",
+      "timestamp_human": "6/8/2025, 4:42:54 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:42:54.647Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:42:59.889Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4184",
+        "username": "goofy",
+        "avatar_url": "https://rugplay.com/avatars/116754019326769257389.png"
+      },
+      "coin": {
+        "symbol": "TTC",
+        "name": "Turtlecoin",
+        "icon_url": "https://rugplay.com/coins/ttc.png"
+      },
+      "transaction": {
+        "amount": 527.7545045744628,
+        "amount_formatted": "527.755",
+        "price_per_unit": 0.017150301592913676,
+        "price_formatted": "$0.01715030",
+        "total_value": 9.0505234,
+        "total_value_formatted": "$9.05"
+      },
+      "timestamp": 1749418979937,
+      "timestamp_iso": "2025-06-08T21:42:59.937Z",
+      "timestamp_human": "6/8/2025, 4:42:59 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:42:59.888Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:43:31.104Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1220",
+        "username": "mrs",
+        "avatar_url": "https://rugplay.com/avatars/111246534780585077776.png"
+      },
+      "coin": {
+        "symbol": "CKC",
+        "name": "CookieCoin",
+        "icon_url": "https://rugplay.com/coins/ckc.png"
+      },
+      "transaction": {
+        "amount": 377820.03863672167,
+        "amount_formatted": "377.82K",
+        "price_per_unit": 0.0002663081688987435,
+        "price_formatted": "$0.00026631",
+        "total_value": 100,
+        "total_value_formatted": "$100.00"
+      },
+      "timestamp": 1749419011150,
+      "timestamp_iso": "2025-06-08T21:43:31.150Z",
+      "timestamp_human": "6/8/2025, 4:43:31 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:43:31.104Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:44:00.268Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1220",
+        "username": "mrs",
+        "avatar_url": "https://rugplay.com/avatars/111246534780585077776.png"
+      },
+      "coin": {
+        "symbol": "SKY",
+        "name": "NissanSkyline",
+        "icon_url": "https://rugplay.com/coins/sky.jpg"
+      },
+      "transaction": {
+        "amount": 713737.4546810463,
+        "amount_formatted": "713.74K",
+        "price_per_unit": 0.0005699798661543156,
+        "price_formatted": "$0.00056998",
+        "total_value": 400,
+        "total_value_formatted": "$400.00"
+      },
+      "timestamp": 1749419040318,
+      "timestamp_iso": "2025-06-08T21:44:00.318Z",
+      "timestamp_human": "6/8/2025, 4:44:00 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:44:00.268Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:44:11.205Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1220",
+        "username": "mrs",
+        "avatar_url": "https://rugplay.com/avatars/111246534780585077776.png"
+      },
+      "coin": {
+        "symbol": "TCZ",
+        "name": "TCZ",
+        "icon_url": "https://rugplay.com/coins/tcz.png"
+      },
+      "transaction": {
+        "amount": 3353.3241820107214,
+        "amount_formatted": "3.35K",
+        "price_per_unit": 0.11942272990710451,
+        "price_formatted": "$0.11942273",
+        "total_value": 400,
+        "total_value_formatted": "$400.00"
+      },
+      "timestamp": 1749419051252,
+      "timestamp_iso": "2025-06-08T21:44:11.252Z",
+      "timestamp_human": "6/8/2025, 4:44:11 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:44:11.204Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:44:22.526Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1220",
+        "username": "mrs",
+        "avatar_url": "https://rugplay.com/avatars/111246534780585077776.png"
+      },
+      "coin": {
+        "symbol": "NVDA",
+        "name": "NVIDIA",
+        "icon_url": "https://rugplay.com/coins/nvda.png"
+      },
+      "transaction": {
+        "amount": 68647.02322261035,
+        "amount_formatted": "68.65K",
+        "price_per_unit": 0.002924265431144901,
+        "price_formatted": "$0.00292427",
+        "total_value": 200,
+        "total_value_formatted": "$200.00"
+      },
+      "timestamp": 1749419062571,
+      "timestamp_iso": "2025-06-08T21:44:22.571Z",
+      "timestamp_human": "6/8/2025, 4:44:22 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:44:22.526Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:44:31.181Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "1220",
+        "username": "mrs",
+        "avatar_url": "https://rugplay.com/avatars/111246534780585077776.png"
+      },
+      "coin": {
+        "symbol": "BOYKISSER",
+        "name": "Boykisser",
+        "icon_url": "https://rugplay.com/coins/boykisser.gif"
+      },
+      "transaction": {
+        "amount": 5517956.040253878,
+        "amount_formatted": "5.52M",
+        "price_per_unit": 0.000018553388981739868,
+        "price_formatted": "$0.00001855",
+        "total_value": 100,
+        "total_value_formatted": "$100.00"
+      },
+      "timestamp": 1749419071232,
+      "timestamp_iso": "2025-06-08T21:44:31.232Z",
+      "timestamp_human": "6/8/2025, 4:44:31 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:44:31.181Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:44:57.464Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "135",
+        "username": "afonya",
+        "avatar_url": "https://rugplay.com/avatars/135.png"
+      },
+      "coin": {
+        "symbol": "RAC",
+        "name": "racbefott",
+        "icon_url": "https://rugplay.com/coins/rac.png"
+      },
+      "transaction": {
+        "amount": 2363230.167257812,
+        "amount_formatted": "2.36M",
+        "price_per_unit": 0.0014313516867584932,
+        "price_formatted": "$0.00143135",
+        "total_value": 3104.999857,
+        "total_value_formatted": "$3105.00"
+      },
+      "timestamp": 1749419097511,
+      "timestamp_iso": "2025-06-08T21:44:57.511Z",
+      "timestamp_human": "6/8/2025, 4:44:57 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T21:44:57.463Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:44:57.539Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "afonya",
+      "userImage": "avatars/135.png",
+      "amount": 2363230.167257812,
+      "coinSymbol": "RAC",
+      "coinName": "racbefott",
+      "coinIcon": "coins/rac.png",
+      "totalValue": 3104.999857,
+      "price": 0.0014313516867584932,
+      "timestamp": 1749419097511,
+      "userId": "135",
+      "formatted_timestamp": "2025-06-08T21:44:57.511Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:21.162Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "354",
+        "username": "astroman_hun",
+        "avatar_url": "https://rugplay.com/avatars/354.png"
+      },
+      "coin": {
+        "symbol": "RAC",
+        "name": "racbefott",
+        "icon_url": "https://rugplay.com/coins/rac.png"
+      },
+      "transaction": {
+        "amount": 812594.380092062,
+        "amount_formatted": "812.59K",
+        "price_per_unit": 0.001523591387835859,
+        "price_formatted": "$0.00152359",
+        "total_value": 1200,
+        "total_value_formatted": "$1200.00"
+      },
+      "timestamp": 1749419121208,
+      "timestamp_iso": "2025-06-08T21:45:21.208Z",
+      "timestamp_human": "6/8/2025, 4:45:21 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T21:45:21.162Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:21.252Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "astroman_hun",
+      "userImage": "avatars/354.png",
+      "amount": 812594.380092062,
+      "coinSymbol": "RAC",
+      "coinName": "racbefott",
+      "coinIcon": "coins/rac.png",
+      "totalValue": 1200,
+      "price": 0.001523591387835859,
+      "timestamp": 1749419121208,
+      "userId": "354",
+      "formatted_timestamp": "2025-06-08T21:45:21.208Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:34.626Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "TCZ",
+        "name": "TCZ",
+        "icon_url": "https://rugplay.com/coins/tcz.png"
+      },
+      "transaction": {
+        "amount": 5357.541039,
+        "amount_formatted": "5.36K",
+        "price_per_unit": 0.11898213008081865,
+        "price_formatted": "$0.11898213",
+        "total_value": 638.6308200061903,
+        "total_value_formatted": "$638.63"
+      },
+      "timestamp": 1749419134671,
+      "timestamp_iso": "2025-06-08T21:45:34.671Z",
+      "timestamp_human": "6/8/2025, 4:45:34 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:45:34.625Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:43.990Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "TCZ",
+        "name": "TCZ",
+        "icon_url": "https://rugplay.com/coins/tcz.png"
+      },
+      "transaction": {
+        "amount": 1679.9514758759178,
+        "amount_formatted": "1.68K",
+        "price_per_unit": 0.11912002514520378,
+        "price_formatted": "$0.11912003",
+        "total_value": 200,
+        "total_value_formatted": "$200.00"
+      },
+      "timestamp": 1749419144029,
+      "timestamp_iso": "2025-06-08T21:45:44.029Z",
+      "timestamp_human": "6/8/2025, 4:45:44 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:45:43.990Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:55.689Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "GAME",
+        "name": "GamerCoin",
+        "icon_url": "https://rugplay.com/coins/game.png"
+      },
+      "transaction": {
+        "amount": 4263.78020945,
+        "amount_formatted": "4.26K",
+        "price_per_unit": 0.10849290583386442,
+        "price_formatted": "$0.10849291",
+        "total_value": 463.24048667936586,
+        "total_value_formatted": "$463.24"
+      },
+      "timestamp": 1749419155736,
+      "timestamp_iso": "2025-06-08T21:45:55.736Z",
+      "timestamp_human": "6/8/2025, 4:45:55 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:45:55.689Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:55.783Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "269",
+        "username": "happy_eagle8044",
+        "avatar_url": "https://rugplay.com/avatars/116187348515169532172.png"
+      },
+      "coin": {
+        "symbol": "TRUMP",
+        "name": "TRUMP",
+        "icon_url": "https://rugplay.com/coins/trump.jpeg"
+      },
+      "transaction": {
+        "amount": 13408.093348338269,
+        "amount_formatted": "13.41K",
+        "price_per_unit": 0.0898581091412406,
+        "price_formatted": "$0.08985811",
+        "total_value": 1200.00304107,
+        "total_value_formatted": "$1200.00"
+      },
+      "timestamp": 1749419155758,
+      "timestamp_iso": "2025-06-08T21:45:55.758Z",
+      "timestamp_human": "6/8/2025, 4:45:55 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T21:45:55.783Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:55.786Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "happy_eagle8044",
+      "userImage": "avatars/116187348515169532172.png",
+      "amount": 13408.093348338269,
+      "coinSymbol": "TRUMP",
+      "coinName": "TRUMP",
+      "coinIcon": "coins/trump.jpeg",
+      "totalValue": 1200.00304107,
+      "price": 0.0898581091412406,
+      "timestamp": 1749419155758,
+      "userId": "269",
+      "formatted_timestamp": "2025-06-08T21:45:55.758Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:45:58.492Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "GAME",
+        "name": "GamerCoin",
+        "icon_url": "https://rugplay.com/coins/game.png"
+      },
+      "transaction": {
+        "amount": 1842.3198534343392,
+        "amount_formatted": "1.84K",
+        "price_per_unit": 0.10862469887911715,
+        "price_formatted": "$0.10862470",
+        "total_value": 200,
+        "total_value_formatted": "$200.00"
+      },
+      "timestamp": 1749419158534,
+      "timestamp_iso": "2025-06-08T21:45:58.534Z",
+      "timestamp_human": "6/8/2025, 4:45:58 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:45:58.492Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:06.121Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "RSC",
+        "name": "rustcoin",
+        "icon_url": "https://rugplay.com/coins/rsc.jpg"
+      },
+      "transaction": {
+        "amount": 75866.42401167,
+        "amount_formatted": "75.87K",
+        "price_per_unit": 0.005355989861229572,
+        "price_formatted": "$0.00535599",
+        "total_value": 408.6084968182695,
+        "total_value_formatted": "$408.61"
+      },
+      "timestamp": 1749419166167,
+      "timestamp_iso": "2025-06-08T21:46:06.167Z",
+      "timestamp_human": "6/8/2025, 4:46:06 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:46:06.121Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:09.113Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "RSC",
+        "name": "rustcoin",
+        "icon_url": "https://rugplay.com/coins/rsc.jpg"
+      },
+      "transaction": {
+        "amount": 37239.6012484245,
+        "amount_formatted": "37.24K",
+        "price_per_unit": 0.005385303712663728,
+        "price_formatted": "$0.00538530",
+        "total_value": 200,
+        "total_value_formatted": "$200.00"
+      },
+      "timestamp": 1749419169068,
+      "timestamp_iso": "2025-06-08T21:46:09.068Z",
+      "timestamp_human": "6/8/2025, 4:46:09 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:46:09.113Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:15.542Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4160",
+        "username": "abed",
+        "avatar_url": "https://rugplay.com/avatars/103868713615854200355.jpg"
+      },
+      "coin": {
+        "symbol": "CR7",
+        "name": "CristianoRonaldo",
+        "icon_url": "https://rugplay.com/coins/cr7.jpg"
+      },
+      "transaction": {
+        "amount": 987329494.8628812,
+        "amount_formatted": "987.33M",
+        "price_per_unit": 0.006228911225700898,
+        "price_formatted": "$0.00622891",
+        "total_value": 77923.4516839,
+        "total_value_formatted": "$77923.45"
+      },
+      "timestamp": 1749419175577,
+      "timestamp_iso": "2025-06-08T21:46:15.577Z",
+      "timestamp_human": "6/8/2025, 4:46:15 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "whale",
+        "processed_at": "2025-06-08T21:46:15.542Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:15.631Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "abed",
+      "userImage": "avatars/103868713615854200355.jpg",
+      "amount": 987329494.8628812,
+      "coinSymbol": "CR7",
+      "coinName": "CristianoRonaldo",
+      "coinIcon": "coins/cr7.jpg",
+      "totalValue": 77923.4516839,
+      "price": 0.006228911225700898,
+      "timestamp": 1749419175577,
+      "userId": "4160",
+      "formatted_timestamp": "2025-06-08T21:46:15.577Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:20.662Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "RICK",
+        "name": "RickRoll",
+        "icon_url": "https://rugplay.com/coins/rick.gif"
+      },
+      "transaction": {
+        "amount": 14799.8208086472,
+        "amount_formatted": "14.80K",
+        "price_per_unit": 0.006765063565988661,
+        "price_formatted": "$0.00676506",
+        "total_value": 100,
+        "total_value_formatted": "$100.00"
+      },
+      "timestamp": 1749419180697,
+      "timestamp_iso": "2025-06-08T21:46:20.697Z",
+      "timestamp_human": "6/8/2025, 4:46:20 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:46:20.662Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:39.632Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4184",
+        "username": "goofy",
+        "avatar_url": "https://rugplay.com/avatars/116754019326769257389.png"
+      },
+      "coin": {
+        "symbol": "TTC",
+        "name": "Turtlecoin",
+        "icon_url": "https://rugplay.com/coins/ttc.png"
+      },
+      "transaction": {
+        "amount": 527.75450457,
+        "amount_formatted": "527.755",
+        "price_per_unit": 0.01714793117694127,
+        "price_formatted": "$0.01714793",
+        "total_value": 9.0505233999138,
+        "total_value_formatted": "$9.05"
+      },
+      "timestamp": 1749419199670,
+      "timestamp_iso": "2025-06-08T21:46:39.670Z",
+      "timestamp_human": "6/8/2025, 4:46:39 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:46:39.632Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:46:45.175Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4184",
+        "username": "goofy",
+        "avatar_url": "https://rugplay.com/avatars/116754019326769257389.png"
+      },
+      "coin": {
+        "symbol": "CR7",
+        "name": "CristianoRonaldo",
+        "icon_url": "https://rugplay.com/coins/cr7.jpg"
+      },
+      "transaction": {
+        "amount": 160.53966630995274,
+        "amount_formatted": "160.54",
+        "price_per_unit": 0.006229069073604265,
+        "price_formatted": "$0.00622907",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419205220,
+      "timestamp_iso": "2025-06-08T21:46:45.220Z",
+      "timestamp_human": "6/8/2025, 4:46:45 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:46:45.175Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:47:07.506Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419227542,
+      "timestamp_iso": "2025-06-08T21:47:07.542Z",
+      "timestamp_human": "6/8/2025, 4:47:07 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:47:07.505Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:47:12.560Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419232598,
+      "timestamp_iso": "2025-06-08T21:47:12.598Z",
+      "timestamp_human": "6/8/2025, 4:47:12 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:47:12.560Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:47:43.510Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419263512,
+      "timestamp_iso": "2025-06-08T21:47:43.512Z",
+      "timestamp_human": "6/8/2025, 4:47:43 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:47:43.510Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:47:51.433Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419271476,
+      "timestamp_iso": "2025-06-08T21:47:51.476Z",
+      "timestamp_human": "6/8/2025, 4:47:51 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:47:51.432Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:47:52.754Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "FA",
+        "name": "halfFace",
+        "icon_url": "https://rugplay.com/coins/fa.webp"
+      },
+      "transaction": {
+        "amount": 93.0514891683124,
+        "amount_formatted": "93.051",
+        "price_per_unit": 1.0747774987721155,
+        "price_formatted": "$1.07477750",
+        "total_value": 100,
+        "total_value_formatted": "$100.00"
+      },
+      "timestamp": 1749419272801,
+      "timestamp_iso": "2025-06-08T21:47:52.801Z",
+      "timestamp_human": "6/8/2025, 4:47:52 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:47:52.754Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:48:17.320Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "FALLGUYS",
+        "name": "FallGuys",
+        "icon_url": "https://rugplay.com/coins/fallguys.png"
+      },
+      "transaction": {
+        "amount": 289.57250555511564,
+        "amount_formatted": "289.573",
+        "price_per_unit": 0.34539542380327487,
+        "price_formatted": "$0.34539542",
+        "total_value": 100,
+        "total_value_formatted": "$100.00"
+      },
+      "timestamp": 1749419297356,
+      "timestamp_iso": "2025-06-08T21:48:17.356Z",
+      "timestamp_human": "6/8/2025, 4:48:17 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:48:17.320Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:49:31.352Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419371376,
+      "timestamp_iso": "2025-06-08T21:49:31.376Z",
+      "timestamp_human": "6/8/2025, 4:49:31 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:49:31.352Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:49:46.603Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419386633,
+      "timestamp_iso": "2025-06-08T21:49:46.633Z",
+      "timestamp_human": "6/8/2025, 4:49:46 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:49:46.603Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:50:28.301Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4184",
+        "username": "goofy",
+        "avatar_url": "https://rugplay.com/avatars/116754019326769257389.png"
+      },
+      "coin": {
+        "symbol": "CRYPTO",
+        "name": "Crypto",
+        "icon_url": "https://rugplay.com/coins/crypto.jpg"
+      },
+      "transaction": {
+        "amount": 33.358357881661505,
+        "amount_formatted": "33.358",
+        "price_per_unit": 0.0599554793197293,
+        "price_formatted": "$0.05995548",
+        "total_value": 2,
+        "total_value_formatted": "$2.00"
+      },
+      "timestamp": 1749419428343,
+      "timestamp_iso": "2025-06-08T21:50:28.343Z",
+      "timestamp_human": "6/8/2025, 4:50:28 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:50:28.300Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:50:38.633Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "45",
+        "username": "lucky_bear7606",
+        "avatar_url": "https://rugplay.com/avatars/107746762786268113547.jpeg"
+      },
+      "coin": {
+        "symbol": "GER",
+        "name": "Germany",
+        "icon_url": "https://rugplay.com/coins/ger.png"
+      },
+      "transaction": {
+        "amount": 349092387,
+        "amount_formatted": "349.09M",
+        "price_per_unit": 0.0000020411720126096957,
+        "price_formatted": "$0.00000204",
+        "total_value": 1421.5524308382714,
+        "total_value_formatted": "$1421.55"
+      },
+      "timestamp": 1749419438670,
+      "timestamp_iso": "2025-06-08T21:50:38.670Z",
+      "timestamp_human": "6/8/2025, 4:50:38 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T21:50:38.633Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:50:38.823Z",
+    "type": "live-trade",
+    "data": {
+      "type": "SELL",
+      "username": "lucky_bear7606",
+      "userImage": "avatars/107746762786268113547.jpeg",
+      "amount": 349092387,
+      "coinSymbol": "GER",
+      "coinName": "Germany",
+      "coinIcon": "coins/ger.png",
+      "totalValue": 1421.5524308382714,
+      "price": 0.0000020411720126096957,
+      "timestamp": 1749419438670,
+      "userId": "45",
+      "formatted_timestamp": "2025-06-08T21:50:38.670Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:50:44.420Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "45",
+        "username": "lucky_bear7606",
+        "avatar_url": "https://rugplay.com/avatars/107746762786268113547.jpeg"
+      },
+      "coin": {
+        "symbol": "GER",
+        "name": "Germany",
+        "icon_url": "https://rugplay.com/coins/ger.png"
+      },
+      "transaction": {
+        "amount": 93388968.81514448,
+        "amount_formatted": "93.39M",
+        "price_per_unit": 0.0000015888922992681247,
+        "price_formatted": "$0.00000159",
+        "total_value": 168.18320041933612,
+        "total_value_formatted": "$168.18"
+      },
+      "timestamp": 1749419444460,
+      "timestamp_iso": "2025-06-08T21:50:44.460Z",
+      "timestamp_human": "6/8/2025, 4:50:44 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "medium",
+        "processed_at": "2025-06-08T21:50:44.420Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:51:32.032Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419492075,
+      "timestamp_iso": "2025-06-08T21:51:32.075Z",
+      "timestamp_human": "6/8/2025, 4:51:32 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:51:32.032Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:51:35.875Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419495913,
+      "timestamp_iso": "2025-06-08T21:51:35.913Z",
+      "timestamp_human": "6/8/2025, 4:51:35 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:51:35.875Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:52:03.113Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419523158,
+      "timestamp_iso": "2025-06-08T21:52:03.158Z",
+      "timestamp_human": "6/8/2025, 4:52:03 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:52:03.113Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:52:07.797Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419527831,
+      "timestamp_iso": "2025-06-08T21:52:07.831Z",
+      "timestamp_human": "6/8/2025, 4:52:07 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:52:07.797Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:52:36.821Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "908",
+        "username": "bright_tiger7157",
+        "avatar_url": "https://rugplay.com/avatars/110257374011878405029.png"
+      },
+      "coin": {
+        "symbol": "ZOV",
+        "name": "ZOVGOIDA",
+        "icon_url": "https://rugplay.com/coins/zov.webp"
+      },
+      "transaction": {
+        "amount": 3371624.919302769,
+        "amount_formatted": "3.37M",
+        "price_per_unit": 0.0013323786333705229,
+        "price_formatted": "$0.00133238",
+        "total_value": 4000,
+        "total_value_formatted": "$4000.00"
+      },
+      "timestamp": 1749419556863,
+      "timestamp_iso": "2025-06-08T21:52:36.863Z",
+      "timestamp_human": "6/8/2025, 4:52:36 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T21:52:36.821Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:52:36.923Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "bright_tiger7157",
+      "userImage": "avatars/110257374011878405029.png",
+      "amount": 3371624.919302769,
+      "coinSymbol": "ZOV",
+      "coinName": "ZOVGOIDA",
+      "coinIcon": "coins/zov.webp",
+      "totalValue": 4000,
+      "price": 0.0013323786333705229,
+      "timestamp": 1749419556863,
+      "userId": "908",
+      "formatted_timestamp": "2025-06-08T21:52:36.863Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:53:02.902Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419582942,
+      "timestamp_iso": "2025-06-08T21:53:02.942Z",
+      "timestamp_human": "6/8/2025, 4:53:02 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:53:02.902Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:53:05.755Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 1,
+        "amount_formatted": "1",
+        "price_per_unit": 0.000025797198732245616,
+        "price_formatted": "$0.00002580",
+        "total_value": 0.000025797198759391904,
+        "total_value_formatted": "$0.00"
+      },
+      "timestamp": 1749419585792,
+      "timestamp_iso": "2025-06-08T21:53:05.792Z",
+      "timestamp_human": "6/8/2025, 4:53:05 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:53:05.755Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:53:48.420Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4184",
+        "username": "goofy",
+        "avatar_url": "https://rugplay.com/avatars/116754019326769257389.png"
+      },
+      "coin": {
+        "symbol": "ZOV",
+        "name": "ZOVGOIDA",
+        "icon_url": "https://rugplay.com/coins/zov.webp"
+      },
+      "transaction": {
+        "amount": 3752.173046119511,
+        "amount_formatted": "3.75K",
+        "price_per_unit": 0.0013327436759911072,
+        "price_formatted": "$0.00133274",
+        "total_value": 5,
+        "total_value_formatted": "$5.00"
+      },
+      "timestamp": 1749419628457,
+      "timestamp_iso": "2025-06-08T21:53:48.457Z",
+      "timestamp_human": "6/8/2025, 4:53:48 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:53:48.420Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:54:25.137Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38756.281679570675,
+        "amount_formatted": "38.76K",
+        "price_per_unit": 0.000025807339988887872,
+        "price_formatted": "$0.00002581",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419665173,
+      "timestamp_iso": "2025-06-08T21:54:25.173Z",
+      "timestamp_human": "6/8/2025, 4:54:25 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:54:25.136Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:54:27.995Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 77526.80012551,
+        "amount_formatted": "77.53K",
+        "price_per_unit": 0.00002578705973006041,
+        "price_formatted": "$0.00002579",
+        "total_value": 1.9999742028003311,
+        "total_value_formatted": "$2.00"
+      },
+      "timestamp": 1749419668035,
+      "timestamp_iso": "2025-06-08T21:54:28.035Z",
+      "timestamp_human": "6/8/2025, 4:54:28 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:54:27.995Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:54:45.498Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419685538,
+      "timestamp_iso": "2025-06-08T21:54:45.538Z",
+      "timestamp_human": "6/8/2025, 4:54:45 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:54:45.498Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:54:48.851Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419688891,
+      "timestamp_iso": "2025-06-08T21:54:48.891Z",
+      "timestamp_human": "6/8/2025, 4:54:48 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:54:48.851Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:55:37.662Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419737699,
+      "timestamp_iso": "2025-06-08T21:55:37.699Z",
+      "timestamp_human": "6/8/2025, 4:55:37 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:55:37.662Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:57:12.115Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38756.28128659725,
+        "amount_formatted": "38.76K",
+        "price_per_unit": 0.000025807340250543796,
+        "price_formatted": "$0.00002581",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419832143,
+      "timestamp_iso": "2025-06-08T21:57:12.143Z",
+      "timestamp_human": "6/8/2025, 4:57:12 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:57:12.114Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:57:15.105Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 77527.79973254,
+        "amount_formatted": "77.53K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 2,
+        "total_value_formatted": "$2.00"
+      },
+      "timestamp": 1749419835137,
+      "timestamp_iso": "2025-06-08T21:57:15.137Z",
+      "timestamp_human": "6/8/2025, 4:57:15 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:57:15.105Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:57:52.993Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "834",
+        "username": "dillyfire555",
+        "avatar_url": "https://rugplay.com/avatars/110041098913645224822.png"
+      },
+      "coin": {
+        "symbol": "XY",
+        "name": "XY",
+        "icon_url": "https://rugplay.com/coins/xy.png"
+      },
+      "transaction": {
+        "amount": 404.06987549,
+        "amount_formatted": "404.07",
+        "price_per_unit": 0.004388539601169844,
+        "price_formatted": "$0.00438854",
+        "total_value": 1.7733241186360829,
+        "total_value_formatted": "$1.77"
+      },
+      "timestamp": 1749419873019,
+      "timestamp_iso": "2025-06-08T21:57:53.019Z",
+      "timestamp_human": "6/8/2025, 4:57:53 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:57:52.993Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:58:42.739Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419922775,
+      "timestamp_iso": "2025-06-08T21:58:42.775Z",
+      "timestamp_human": "6/8/2025, 4:58:42 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:58:42.739Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:58:42.753Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.518445938826,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025797198993835923,
+        "price_formatted": "$0.00002580",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419922775,
+      "timestamp_iso": "2025-06-08T21:58:42.775Z",
+      "timestamp_human": "6/8/2025, 4:58:42 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:58:42.753Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:58:45.585Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419925634,
+      "timestamp_iso": "2025-06-08T21:58:45.634Z",
+      "timestamp_human": "6/8/2025, 4:58:45 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:58:45.585Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T21:58:45.599Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "SELL",
+      "action": "sell",
+      "user": {
+        "id": "4180",
+        "username": "wils",
+        "avatar_url": "https://rugplay.com/avatars/4180.webp"
+      },
+      "coin": {
+        "symbol": "LKC",
+        "name": "LINKCOIN",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 38771.51844594,
+        "amount_formatted": "38.77K",
+        "price_per_unit": 0.000025787059730074608,
+        "price_formatted": "$0.00002579",
+        "total_value": 1,
+        "total_value_formatted": "$1.00"
+      },
+      "timestamp": 1749419925634,
+      "timestamp_iso": "2025-06-08T21:58:45.634Z",
+      "timestamp_human": "6/8/2025, 4:58:45 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bearish",
+        "trade_size": "micro",
+        "processed_at": "2025-06-08T21:58:45.599Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:05.550Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "502",
+        "username": "directcube",
+        "avatar_url": "https://rugplay.com/avatars/502.jpg"
+      },
+      "coin": {
+        "symbol": "GHHS",
+        "name": "GAHSH",
+        "icon_url": null
+      },
+      "transaction": {
+        "amount": 500000000,
+        "amount_formatted": "500.00M",
+        "price_per_unit": 0.000004,
+        "price_formatted": "$0.00000400",
+        "total_value": 1000,
+        "total_value_formatted": "$1000.00"
+      },
+      "timestamp": 1749422045555,
+      "timestamp_iso": "2025-06-08T22:34:05.555Z",
+      "timestamp_human": "6/8/2025, 5:34:05 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T22:34:05.550Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:05.631Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "directcube",
+      "userImage": "avatars/502.jpg",
+      "amount": 500000000,
+      "coinSymbol": "GHHS",
+      "coinName": "GAHSH",
+      "coinIcon": "",
+      "totalValue": 1000,
+      "price": 0.000004,
+      "timestamp": 1749422045555,
+      "userId": "502",
+      "formatted_timestamp": "2025-06-08T22:34:05.555Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:10.278Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "502",
+        "username": "directcube",
+        "avatar_url": "https://rugplay.com/avatars/502.jpg"
+      },
+      "coin": {
+        "symbol": "ACCC",
+        "name": "AnimalCompany",
+        "icon_url": "https://rugplay.com/coins/accc.jpg"
+      },
+      "transaction": {
+        "amount": 500000000,
+        "amount_formatted": "500.00M",
+        "price_per_unit": 0.000004,
+        "price_formatted": "$0.00000400",
+        "total_value": 1000,
+        "total_value_formatted": "$1000.00"
+      },
+      "timestamp": 1749422050278,
+      "timestamp_iso": "2025-06-08T22:34:10.278Z",
+      "timestamp_human": "6/8/2025, 5:34:10 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T22:34:10.277Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:10.280Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "directcube",
+      "userImage": "avatars/502.jpg",
+      "amount": 500000000,
+      "coinSymbol": "ACCC",
+      "coinName": "AnimalCompany",
+      "coinIcon": "coins/accc.jpg",
+      "totalValue": 1000,
+      "price": 0.000004,
+      "timestamp": 1749422050278,
+      "userId": "502",
+      "formatted_timestamp": "2025-06-08T22:34:10.278Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:15.786Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "502",
+        "username": "directcube",
+        "avatar_url": "https://rugplay.com/avatars/502.jpg"
+      },
+      "coin": {
+        "symbol": "GVN",
+        "name": "GOVNO2",
+        "icon_url": "https://rugplay.com/coins/gvn.jpg"
+      },
+      "transaction": {
+        "amount": 500000000,
+        "amount_formatted": "500.00M",
+        "price_per_unit": 0.000004,
+        "price_formatted": "$0.00000400",
+        "total_value": 1000,
+        "total_value_formatted": "$1000.00"
+      },
+      "timestamp": 1749422055774,
+      "timestamp_iso": "2025-06-08T22:34:15.774Z",
+      "timestamp_human": "6/8/2025, 5:34:15 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T22:34:15.785Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:15.885Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "directcube",
+      "userImage": "avatars/502.jpg",
+      "amount": 500000000,
+      "coinSymbol": "GVN",
+      "coinName": "GOVNO2",
+      "coinIcon": "coins/gvn.jpg",
+      "totalValue": 1000,
+      "price": 0.000004,
+      "timestamp": 1749422055774,
+      "userId": "502",
+      "formatted_timestamp": "2025-06-08T22:34:15.774Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:28.445Z",
+    "type": "trade",
+    "data": {
+      "trade_type": "BUY",
+      "action": "buy",
+      "user": {
+        "id": "502",
+        "username": "directcube",
+        "avatar_url": "https://rugplay.com/avatars/502.jpg"
+      },
+      "coin": {
+        "symbol": "MUSK",
+        "name": "ElonMusk",
+        "icon_url": "https://rugplay.com/coins/musk.webp"
+      },
+      "transaction": {
+        "amount": 500000000,
+        "amount_formatted": "500.00M",
+        "price_per_unit": 0.000004,
+        "price_formatted": "$0.00000400",
+        "total_value": 1000,
+        "total_value_formatted": "$1000.00"
+      },
+      "timestamp": 1749422068439,
+      "timestamp_iso": "2025-06-08T22:34:28.439Z",
+      "timestamp_human": "6/8/2025, 5:34:28 PM",
+      "metadata": {
+        "event_source": "rugplay",
+        "event_type": "trade",
+        "market_direction": "bullish",
+        "trade_size": "large",
+        "processed_at": "2025-06-08T22:34:28.445Z"
+      }
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  },
+  {
+    "timestamp": "2025-06-08T22:34:28.546Z",
+    "type": "live-trade",
+    "data": {
+      "type": "BUY",
+      "username": "directcube",
+      "userImage": "avatars/502.jpg",
+      "amount": 500000000,
+      "coinSymbol": "MUSK",
+      "coinName": "ElonMusk",
+      "coinIcon": "coins/musk.webp",
+      "totalValue": 1000,
+      "price": 0.000004,
+      "timestamp": 1749422068439,
+      "userId": "502",
+      "formatted_timestamp": "2025-06-08T22:34:28.439Z",
+      "event_source": "rugplay"
+    },
+    "metadata": {
+      "source": "rugplay-logger",
+      "version": "1.0.0"
+    }
+  }
+]
