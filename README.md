@@ -1,4 +1,4 @@
-# 🎯 Rugplay Logger
+# 🎯 Rugplay Logger (WIP)
 
 A professional TypeScript WebSocket client for connecting to Rugplay's trading API to receive, process, and export live trading events.
 
