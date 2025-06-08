@@ -113,7 +113,7 @@ const exportConfig: ExportConfig = {
 ## 💻 Usage as SDK
 
 ```typescript
-import { RugplayClient, exportConfig } from './src/sdk';
+import { RugplayClient, exportConfig } from './src/sdk'; // change src to the folder that contains rugplay
 
 const client = new RugplayClient({
     config: {
@@ -135,9 +135,6 @@ client.on('all-trades', (data) => {
 ## 🧪 Testing
 
 ```bash
-# Test event parsing
-node tests/test-events.js
-
 # Test export functionality
 node tests/test-export.js
 
@@ -148,7 +145,7 @@ node tests/test-sdk.js
 ## 📚 Documentation
 
 - 📖 [SDK Usage Guide](./docs/SDK_USAGE.md)
-- 🚀 [Project Status](./docs/PROJECT_STATUS.md)
+- 📢 [Enhanced Events](./docs/ENHANCED_EVENT_HANDLER.md)
 - 🔔 [Discord Setup](./docs/DISCORD_SETUP.md)
 
 ---
