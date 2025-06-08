@@ -1,5 +1,6 @@
 node_modules/
 dist/
+exports/
 test*.json
 test*.csv
 *.log
