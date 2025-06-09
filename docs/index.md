@@ -1,35 +1,102 @@
 ---
+layout: default
 title: Home
-layout: home
+nav_order: 1
+description: "Rugplay Logger - A TypeScript WebSocket client for logging and exporting Rugplay trading events."
+permalink: /
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# Rugplay Logger
+{: .fs-9 }
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+A powerful TypeScript WebSocket client for real-time logging and exporting of Rugplay trading events with support for file exports and Discord notifications.
+{: .fs-6 .fw-300 }
 
-More specifically, the created site:
+[Quick Start](#quick-start){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[View on GitHub](https://github.com/wbrous/rugplay-ws){: .btn .fs-5 .mb-4 .mb-md-0 }
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+---
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+## Features
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+- **Real-time WebSocket Connection**: Connect to Rugplay's WebSocket API for live trading data
+- **Event Logging**: Comprehensive logging of all trading events with timestamps
+- **Multiple Export Formats**: Export data to JSON, YAML, or CSV formats
+- **Discord Integration**: Send trading alerts directly to Discord via webhooks
+- **Auto-reconnection**: Robust connection handling with automatic reconnection
+- **TypeScript Support**: Full TypeScript implementation with type safety
+- **Event-driven Architecture**: Subscribe to specific events with custom handlers
 
-To get started with creating a site, simply:
+## Quick Start
 
-1. click "[use this template]" to create a GitHub repository
-2. go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
+### Installation
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+```bash
+# Clone the repository
+git clone https://github.com/your-repo/rugplay-logger.git
+cd rugplay-logger
 
-----
+# Install dependencies
+npm install
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+# Build the project
+npm run build
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+# Run the logger
+npm start
+```
+
+### Basic Usage
+
+```typescript
+import { RugplayClient } from './src/client/RugplayClient';
+import { webSocketConfig } from './src/configuration/websocket';
+import { exportConfig } from './src/configuration/export';
+
+// Create client with auto-connect
+const client = new RugplayClient({
+    config: webSocketConfig,
+    exportConfig: exportConfig,
+    autoConnect: true,
+    debug: false
+});
+
+// Listen for trade events
+client.on('trade', (data) => {
+    console.log('New trade:', data);
+});
+
+// Listen for price updates
+client.on('price', (data) => {
+    console.log('Price update:', data);
+});
+```
+
+## Project Structure
+
+```
+src/
+├── client/           # WebSocket client implementation
+├── configuration/    # Configuration files
+├── logger/          # Event logging system
+├── types/           # TypeScript type definitions
+├── index.ts         # Main entry point
+└── sdk.ts           # SDK exports
+
+docs/                # Documentation (Jekyll)
+exports/             # Generated export files
+tests/               # Test files
+```
+
+## Documentation
+
+- [API Reference]({{ site.baseurl }}{% link api.md %}) - Complete API documentation
+- [Configuration]({{ site.baseurl }}{% link configuration.md %}) - Setup and configuration guide
+- [Event Types]({{ site.baseurl }}{% link events.md %}) - Available WebSocket events
+- [Examples]({{ site.baseurl }}{% link examples.md %}) - Usage examples and recipes
+
+---
+
+## License
+
+This project is licensed under the GNU License. See the [LICENSE](LICENSE) file for details.
