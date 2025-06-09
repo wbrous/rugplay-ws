@@ -1,0 +1,15 @@
+<!-- Custom head content for dark mode support -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+
+<!-- Prevent flash of unstyled content -->
+<script>
+  // Apply saved theme immediately to prevent flash
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const theme = savedTheme || systemTheme;
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>

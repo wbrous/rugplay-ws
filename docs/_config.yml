@@ -23,9 +23,44 @@ nav_sort: case_insensitive
 # Footer content
 footer_content: "Copyright &copy; 2025 Rugplay Logger. Distributed under the <a href=\"https://github.com/wbrous/rugplay-ws/blob/main/LICENSE\">GNU License</a>."
 
-# Color scheme
-color_scheme: nil
+# Color scheme and dark mode
+color_scheme: light
+
+# Enable dark mode toggle
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/wbrous/rugplay-ws"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+# Additional features
+enable_copy_code_button: true
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Callouts configuration
+callouts_level: quiet
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
 
 # Plugins
 plugins:
   - jekyll-seo-tag
+
+# Sass configuration for custom styles
+sass:
+  sass_dir: _sass
+  style: compressed
