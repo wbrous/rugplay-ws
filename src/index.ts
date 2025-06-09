@@ -8,7 +8,7 @@ function main(): void {
         config: webSocketConfig,
         exportConfig: exportConfig,
         autoConnect: true,
-        debug: true
+        debug: false
     });// Listen for specific events (you can add more as needed)
     client.on('message', (data) => {
         console.log('📨 Raw message received:', data);
