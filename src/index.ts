@@ -9,36 +9,39 @@ function main(): void {
         exportConfig: exportConfig,
         autoConnect: true,
         debug: false
-    });// Listen for specific events (you can add more as needed)
+    });
+
     client.on('message', (data) => {
         console.log('📨 Raw message received:', data);
     });
 
-    client.on('all-trades', (data) => {
-        console.log('💰 All-trades event:', {
-            type: data.type,
-            username: data.username,
-            amount: data.amount,
-            coinSymbol: data.coinSymbol,
-            coinName: data.coinName,
-            totalValue: data.totalValue,
-            price: data.price,
-            timestamp: new Date(data.timestamp).toISOString(),
-            userId: data.userId
-        });
-    });
+    // DEBUG: Uncomment these lines to enable additional event logging
 
-    client.on('update', (data) => {
-        console.log('🔄 Update received:', data);
-    });
+    // client.on('all-trades', (data) => {
+    //     console.log('💰 All-trades event:', {
+    //         type: data.type,
+    //         username: data.username,
+    //         amount: data.amount,
+    //         coinSymbol: data.coinSymbol,
+    //         coinName: data.coinName,
+    //         totalValue: data.totalValue,
+    //         price: data.price,
+    //         timestamp: new Date(data.timestamp).toISOString(),
+    //         userId: data.userId
+    //     });
+    // });
 
-    client.on('trade', (data) => {
-        console.log('💰 Trade event:', data);
-    });
+    // client.on('update', (data) => {
+    //     console.log('🔄 Update received:', data);
+    // });
 
-    client.on('price', (data) => {
-        console.log('💲 Price update:', data);
-    });
+    // client.on('trade', (data) => {
+    //     console.log('💰 Trade event:', data);
+    // });
+
+    // client.on('price', (data) => {
+    //     console.log('💲 Price update:', data);
+    // });
 
     // Handle graceful shutdown
     process.on('SIGINT', () => {
