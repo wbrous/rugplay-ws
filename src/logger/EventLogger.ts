@@ -263,7 +263,7 @@ class EventLogger {
         if (!this.config.discord.webhookUrl) return;
 
         try {
-            if (this.config.discord.messageFormat === 'embed' && this.createDiscordEmbed(event) === "CANCEL") return;
+            if (this.createDiscordText(event) === "CANCEL" || this.createDiscordEmbed(event) === "CANCEL") return;
 
             const payload = this.config.discord.messageFormat === 'embed' 
                 ? this.createDiscordEmbed(event)
@@ -340,9 +340,7 @@ class EventLogger {
         // Fallback for legacy format
         const emoji = data.type === 'BUY' ? '🟢' : '🔴';
         
-        return {
-            content: `${emoji} **${data.type}** ${data.coinSymbol} | User: ${data.username} | Amount: ${data.amount?.toLocaleString()} | Price: $${data.price?.toFixed(6)} | Total: $${data.totalValue}`
-        };
+        return "CANCEL"
     }
 
     /**
