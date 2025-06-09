@@ -2,11 +2,13 @@
 const { RugplayClient } = require('../dist/sdk');
 
 const client = new RugplayClient({
-  url: 'wss://ws.rugplay.com/',
-  autoReconnect: true,
-  reconnectAttempts: 3,
-  reconnectDelay: 1000,
-  logEvents: true
+  config: {
+    url: 'wss://ws.rugplay.com/',
+    reconnectAttempts: 3,
+    reconnectDelay: 1000
+  },
+  autoConnect: true,
+  debug: true
 });
 
 console.log('🧪 Testing SDK...');
