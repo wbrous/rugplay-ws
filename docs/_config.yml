@@ -29,8 +29,3 @@ color_scheme: dark
 # Plugins
 plugins:
   - jekyll-seo-tag
-
-# Sass configuration for custom styles
-sass:
-  sass_dir: _sass
-  style: compressed
