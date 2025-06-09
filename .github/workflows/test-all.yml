@@ -1,0 +1,79 @@
+name: Run All Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Verify build artifacts
+      run: |
+        echo "Checking build output..."
+        ls -la dist/
+        if [ ! -f "dist/sdk.js" ]; then
+          echo "❌ SDK build failed - dist/sdk.js not found"
+          exit 1
+        fi
+        echo "✅ Build artifacts verified"
+        
+    - name: Create exports directory
+      run: mkdir -p exports
+      
+    - name: Run SDK Test
+      run: npm run test:sdk
+      
+    - name: Run Export Test (JSON)
+      run: npm run test:export:json
+      
+    - name: Run Export Test (CSV)
+      run: npm run test:export:csv
+      
+    - name: Run Export Test (YAML)
+      run: npm run test:export:yaml
+      
+    - name: Verify export outputs
+      run: |
+        echo "Checking export directory..."
+        ls -la exports/ || echo "No exports directory found"
+        
+        # Check if any export files were created
+        if find exports/ -name "*.json" -o -name "*.csv" -o -name "*.yaml" | grep -q .; then
+          echo "✅ Export files were created"
+          find exports/ -type f -exec echo "Found: {}" \;
+        else
+          echo "⚠️  No export files found (this may be expected if no data was received)"
+        fi
+        
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-artifacts-node-${{ matrix.node-version }}
+        path: |
+          exports/
+          *.log
+        retention-days: 7

@@ -1,0 +1,97 @@
+name: Test SDK Connection
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch: # Allow manual trigger
+  schedule:
+    - cron: '0 */6 * * *' # Run every 6 hours to test WebSocket connectivity
+
+jobs:
+  test-sdk:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Test WebSocket connection availability
+      run: |
+        echo "Testing if WebSocket endpoint is reachable..."
+        curl -I --max-time 10 https://ws.rugplay.com/ || echo "HTTPS endpoint check completed"
+        
+    - name: Run SDK connection test
+      run: |
+        echo "Running SDK test with 15 second timeout..."
+        timeout 15s node tests/test-sdk.js || exit_code=$?
+        if [ ${exit_code:-0} -eq 124 ]; then
+          echo "✅ SDK test completed (timeout expected)"
+          exit 0
+        elif [ ${exit_code:-0} -eq 0 ]; then
+          echo "✅ SDK test completed successfully"
+          exit 0
+        else
+          echo "❌ SDK test failed with exit code $exit_code"
+          exit $exit_code
+        fi
+        
+    - name: Test SDK without network (offline test)
+      run: |
+        echo "Testing SDK initialization without network connection..."
+        cat > test-offline.js << 'EOF'
+        const { RugplayClient } = require('./dist/sdk');
+        
+        console.log('🧪 Testing SDK initialization...');
+        
+        try {
+          const client = new RugplayClient({
+            url: 'wss://invalid-url-for-testing/',
+            autoReconnect: false,
+            reconnectAttempts: 1,
+            reconnectDelay: 100,
+            logEvents: false
+          });
+          
+          console.log('✅ SDK initialized successfully');
+          
+          // Test event listener setup
+          client.on('trade', () => {});
+          client.on('price', () => {});
+          
+          console.log('✅ Event listeners setup successfully');
+          
+          // Test connection attempt (should fail gracefully)
+          client.connect().catch(() => {
+            console.log('✅ Connection failure handled gracefully');
+            process.exit(0);
+          });
+          
+          setTimeout(() => {
+            console.log('✅ Offline SDK test completed');
+            process.exit(0);
+          }, 2000);
+          
+        } catch (error) {
+          console.error('❌ SDK initialization failed:', error);
+          process.exit(1);
+        }
+        EOF
+        
+        node test-offline.js

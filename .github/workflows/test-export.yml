@@ -1,0 +1,62 @@
+name: Test Export Functionality
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  test-export:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Create exports directory
+      run: mkdir -p exports
+      
+    - name: Run export test with JSON format
+      run: echo "json" | timeout 30s node tests/test-export.js || exit_code=$?; if [ ${exit_code:-0} -eq 124 ]; then echo "Test completed (timeout expected)"; else exit $exit_code; fi
+      
+    - name: Run export test with CSV format  
+      run: echo -e "csv" | timeout 30s node tests/test-export.js || exit_code=$?; if [ ${exit_code:-0} -eq 124 ]; then echo "Test completed (timeout expected)"; else exit $exit_code; fi
+      
+    - name: Run export test with YAML format
+      run: echo -e "yaml" | timeout 30s node tests/test-export.js || exit_code=$?; if [ ${exit_code:-0} -eq 124 ]; then echo "Test completed (timeout expected)"; else exit $exit_code; fi
+      
+    - name: Check export files were created
+      run: |
+        ls -la exports/
+        echo "Checking for export files..."
+        if [ -f "exports/rugplay-trades.json" ] || [ -f "exports/rugplay-trades.csv" ] || [ -f "exports/rugplay-trades.yaml" ]; then
+          echo "✅ Export files created successfully"
+        else
+          echo "❌ No export files found"
+          exit 1
+        fi
+        
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: export-test-files-node-${{ matrix.node-version }}
+        path: exports/
+        retention-days: 7

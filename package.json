@@ -2,13 +2,19 @@
   "name": "rugplay-logger",
   "version": "1.0.0",
   "description": "A TypeScript project for logging Rugplay WebSocket events",
-  "main": "dist/index.js",
-  "scripts": {
+  "main": "dist/index.js",  "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "clean": "rimraf dist",
-    "bun-start": "bun run src/index.ts"
+    "bun-start": "bun run src/index.ts",
+    "test": "npm run test:sdk && npm run test:export:json",
+    "test:sdk": "node tests/run-sdk-test.js",
+    "test:export": "node tests/test-export.js",
+    "test:export:json": "node tests/run-export-test.js json",
+    "test:export:csv": "node tests/run-export-test.js csv",
+    "test:export:yaml": "node tests/run-export-test.js yaml",
+    "test:all": "npm run build && npm run test:sdk && npm run test:export:json && npm run test:export:csv && npm run test:export:yaml"
   },
   "devDependencies": {
     "@types/bun": "latest",
