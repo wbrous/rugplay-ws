@@ -32,14 +32,14 @@ class EventLogger {
     /**
      * Log an event for export
      */
-    public logEvent(eventType: string, eventData: any): void {
+    public async logEvent(eventType: string, eventData: any): Promise<void> {
         const logEvent: LogEvent = {
             timestamp: new Date().toISOString(),
             type: eventType,
             data: eventData,
             metadata: {
-                source: 'rugplay-logger',
-                version: '1.0.0'
+                source: (await import('../../package.json')).default.name,
+                version: (await import('../../package.json')).default.version
             }
         };
 
@@ -263,6 +263,8 @@ class EventLogger {
         if (!this.config.discord.webhookUrl) return;
 
         try {
+            if (this.config.discord.messageFormat === 'embed' && this.createDiscordEmbed(event) === "CANCEL") return;
+
             const payload = this.config.discord.messageFormat === 'embed' 
                 ? this.createDiscordEmbed(event)
                 : this.createDiscordText(event);
@@ -300,7 +302,7 @@ class EventLogger {
                     fields: [
                         { name: 'User', value: `${data.user.username} (ID: ${data.user.id})`, inline: true },
                         { name: 'Coin', value: `${data.coin.name} (${data.coin.symbol})`, inline: true },
-                        { name: 'Trade Size', value: data.metadata?.trade_size?.toUpperCase() || 'Unknown', inline: true },
+                        { name: 'Trade Size', value: data.metadata?.trade_size?.toUpperCase() ? `${this.getTradeEmoji(data.metadata?.trade_size?.toLowerCase())} ${data.metadata?.trade_size?.toUpperCase()}` : 'Unknown', inline: true },
                         { name: 'Amount', value: data.transaction.amount_formatted || data.transaction.amount?.toLocaleString(), inline: true },
                         { name: 'Price per Unit', value: data.transaction.price_formatted || `$${data.transaction.price_per_unit?.toFixed(6)}`, inline: true },
                         { name: 'Total Value', value: data.transaction.total_value_formatted || `$${data.transaction.total_value}`, inline: true }
@@ -316,22 +318,7 @@ class EventLogger {
         // Fallback for legacy format
         const color = data.type === 'BUY' ? 0x00ff00 : 0xff0000;
         
-        return {
-            embeds: [{
-                title: `${data.type} Trade - ${data.coinSymbol}`,
-                color: color,
-                timestamp: event.timestamp,
-                fields: [
-                    { name: 'User', value: data.username, inline: true },
-                    { name: 'Coin', value: `${data.coinName} (${data.coinSymbol})`, inline: true },
-                    { name: 'Amount', value: data.amount?.toLocaleString(), inline: true },
-                    { name: 'Price', value: `$${data.price?.toFixed(6)}`, inline: true },
-                    { name: 'Total Value', value: `$${data.totalValue}`, inline: true },
-                    { name: 'User ID', value: data.userId, inline: true }
-                ],
-                thumbnail: data.userImage ? { url: `https://rugplay.com/${data.userImage}` } : undefined
-            }]
-        };
+        return "CANCEL"
     }
 
     /**
