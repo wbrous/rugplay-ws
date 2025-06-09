@@ -1,11 +1,11 @@
-title: Rugplay Logger
+title: RugplayWS
 description: A TypeScript WebSocket client for logging and exporting Rugplay trading events
 theme: just-the-docs
 
-url: https://your-username.github.io/rugplay-logger
+url: https://wbrous.github.io/rugplay-ws
 
 aux_links:
-  GitHub Repository: https://github.com/your-username/rugplay-logger
+  GitHub Repo: https://github.com/wbrous/rugplay-ws
   
 # Search functionality
 search_enabled: true
@@ -21,7 +21,7 @@ search:
 nav_sort: case_insensitive
 
 # Footer content
-footer_content: "Copyright &copy; 2024 Rugplay Logger. Distributed under the <a href=\"https://github.com/wbrous/rugplay-ws/blob/main/LICENSE\">GNU License</a>."
+footer_content: "Copyright &copy; 2025 Rugplay Logger. Distributed under the <a href=\"https://github.com/wbrous/rugplay-ws/blob/main/LICENSE\">GNU License</a>."
 
 # Color scheme
 color_scheme: nil
