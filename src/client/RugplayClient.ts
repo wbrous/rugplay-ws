@@ -217,13 +217,16 @@ class RugplayClient {
             
         } else {
             this.log(`🔧 Processing unstructured message:`, data);
+
+            if (data.raw) data = data.raw;
+
             // Fallback for other message structures
-            if (data.raw.type) {
-                this.triggerEvent(data.raw.type, data);
+            if (data.type) {
+                this.triggerEvent(data.type, data);
             }
             
             if (data.event) {
-                this.triggerEvent(data.raw.event, data);
+                this.triggerEvent(data.event, data);
             }
         }
     }
