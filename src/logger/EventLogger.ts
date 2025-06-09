@@ -298,7 +298,6 @@ class EventLogger {
                 embeds: [{
                     title: `${emoji} ${data.trade_type} Trade - ${data.coin.symbol}`,
                     color: color,
-                    timestamp: event.timestamp,
                     fields: [
                         { name: 'User', value: `${data.user.username} (ID: ${data.user.id})`, inline: true },
                         { name: 'Coin', value: `${data.coin.name} (${data.coin.symbol})`, inline: true },
@@ -309,7 +308,7 @@ class EventLogger {
                     ],
                     thumbnail: data.user.avatar_url ? { url: data.user.avatar_url } : undefined,
                     footer: {
-                        text: `Market: ${data.metadata?.market_direction || 'Unknown'} | ${data.timestamp_human || 'Unknown time'}`
+                        text: `Market: ${data.metadata?.market_direction || 'Unknown'} • ${data.timestamp_human || 'Unknown time'}`
                     }
                 }]
             };
