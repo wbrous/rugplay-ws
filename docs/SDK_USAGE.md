@@ -199,7 +199,3 @@ src/
 ├── index.ts                 # Main application entry point
 └── sdk.ts                   # SDK exports
 ```
-
-## License
-
-ISC
