@@ -10,12 +10,12 @@ function main(): void {
         autoConnect: true,
         debug: false
     });
-
-    client.on('message', (data) => {
-        console.log('📨 Raw message received:', data);
-    });
-
+    
     // DEBUG: Uncomment these lines to enable additional event logging
+
+    // client.on('message', (data) => {
+    //     console.log('📨 Raw message received:', data);
+    // });
 
     // client.on('all-trades', (data) => {
     //     console.log('💰 All-trades event:', {
