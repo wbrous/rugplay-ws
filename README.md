@@ -150,10 +150,6 @@ node tests/test-sdk.js
 
 ---
 
-**Status: ✅ Production Ready**
-- Live WebSocket connection ✅
-- Event parsing and processing ✅
-- Multi-format export system ✅  
-- Discord notifications ✅
-- Auto-reconnection ✅
-- Full TypeScript support ✅
+## License
+
+See [LICENSE](./LICENSE) for more information.
