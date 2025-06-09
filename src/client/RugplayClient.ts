@@ -29,7 +29,7 @@ class RugplayClient {
         
         // Initialize logger if export config is provided
         if (options.exportConfig) {
-            this.logger = new EventLogger(options.exportConfig);
+            this.logger = new EventLogger(options.exportConfig, this);
         }
         
         if (options.autoConnect !== false) {
@@ -424,7 +424,7 @@ class RugplayClient {
     /**
      * Debug logging
      */
-    private log(message: string, ...args: any[]): void {
+    public log(message: string, ...args: any[]): void {
         if (this.debug) {
             const timestamp = new Date().toISOString();
             console.log(`[${timestamp}] [RugplayClient] ${message}`, ...args);

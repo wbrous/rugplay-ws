@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { ExportConfig } from '../types/config';
+import RugplayClient from '../sdk';
 
 interface LogEvent {
     timestamp: string;
@@ -18,9 +19,11 @@ class EventLogger {
     private bufferSize: number = 100;
     private flushInterval: number = 5000; // 5 seconds
     private flushTimer: NodeJS.Timeout | null = null;
+    private client: RugplayClient;
 
-    constructor(config: ExportConfig, bufferSize: number = 100) {
+    constructor(config: ExportConfig, client: RugplayClient, bufferSize: number = 100) {
         this.config = config;
+        this.client = client;
         this.bufferSize = bufferSize;
         this.ensureExportDirectory();
         this.startFlushTimer();
@@ -75,13 +78,13 @@ class EventLogger {
                     this.writeYAMLFile(outputPath);
                     break;
                 default:
-                    console.warn(`Unsupported export format: ${this.config.file.format}`);
+                    this.client.log(`Unsupported export format: ${this.config.file.format}`);
             }
 
-            console.log(`📁 Exported ${this.eventBuffer.length} events to ${outputPath}`);
+            this.client.log(`📁 Exported ${this.eventBuffer.length} events to ${outputPath}`);
             this.eventBuffer = [];
         } catch (error) {
-            console.error('❌ Error flushing events:', error);
+            this.client.log('Error flushing events:', error);
         }
     }
 
@@ -111,7 +114,7 @@ class EventLogger {
                     existingData = [];
                 }
             } catch (error) {
-                console.warn('⚠️ Could not parse existing JSON file, starting fresh');
+                this.client.log('Could not parse existing JSON file, starting fresh');
                 existingData = [];
             }
         }
@@ -273,10 +276,10 @@ class EventLogger {
             });
 
             if (!response.ok) {
-                console.warn(`⚠️ Discord webhook failed: ${response.status}`);
+                this.client.log(`Discord webhook failed: ${response.status}`);
             }
         } catch (error) {
-            console.warn('⚠️ Error sending to Discord:', error);
+            this.client.log('Error sending to Discord:', error);
         }
     }    /**
      * Create Discord embed payload
