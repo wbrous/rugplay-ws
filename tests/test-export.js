@@ -288,9 +288,13 @@ async function main() {
         console.log('✅ Human-readable number formatting');
         console.log('✅ Structured metadata');
         console.log(`✅ ${format.toUpperCase()} export functionality`);
+
+        process.exit(0);
         
     } catch (error) {
         console.error('❌ Export test failed:', error);
+
+        process.exit(1);
     } finally {
         rl.close();
     }
