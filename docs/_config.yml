@@ -2,7 +2,7 @@ title: RugplayWS
 description: A TypeScript WebSocket client for logging and exporting Rugplay trading events
 theme: just-the-docs
 
-url: https://wbrous.github.io/rugplay-ws
+url: https://rugplayws.gir0fa.com
 
 aux_links:
   GitHub Repo: https://github.com/wbrous/rugplay-ws
