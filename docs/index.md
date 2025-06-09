@@ -28,9 +28,6 @@ A powerful TypeScript WebSocket client for real-time logging and exporting of Ru
 - **Event-driven Architecture**: Subscribe to specific events with custom handlers
 - **Dark Mode Support**: Toggle between light and dark themes for comfortable viewing
 
-{: .note }
-> **💡 Theme Toggle**: Look for the theme toggle button in the top-right corner to switch between light and dark modes. Your preference will be saved automatically!
-
 ## Quick Start
 
 ### Installation
