@@ -1,0 +1,144 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<!-- Dark Mode Toggle Button -->
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+  <span id="theme-icon">🌙</span>
+</button>
+
+<style>
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  user-select: none;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Light theme styles */
+body.light-theme {
+  --body-background-color: #ffffff !important;
+  --body-text-color: #24292f !important;
+  --nav-child-link-color: #656d76 !important;
+  --search-background-color: #f6f8fa !important;
+  --search-input-background-color: #ffffff !important;
+  --border-color: #d1d9e0 !important;
+  --code-background-color: #f6f8fa !important;
+  --table-background-color: #ffffff !important;
+  --link-color: #0969da !important;
+  --btn-primary-color: #0969da !important;
+}
+
+body.light-theme .side-bar {
+  background-color: #f6f8fa !important;
+  border-right: 1px solid #d1d9e0 !important;
+}
+
+body.light-theme .site-header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #d1d9e0 !important;
+}
+
+body.light-theme .main-content-wrap {
+  background-color: #ffffff !important;
+}
+
+body.light-theme .theme-toggle {
+  background-color: #24292f;
+  color: #fbbf24;
+  box-shadow: 0 4px 12px rgba(36, 41, 47, 0.3);
+}
+
+body.light-theme .theme-toggle:hover {
+  box-shadow: 0 6px 16px rgba(36, 41, 47, 0.4);
+}
+
+body.light-theme .search-input {
+  background-color: #ffffff !important;
+  border: 1px solid #d1d9e0 !important;
+  color: #24292f !important;
+}
+
+body.light-theme .search-results {
+  background-color: #ffffff !important;
+  border: 1px solid #d1d9e0 !important;
+}
+
+body.light-theme .navigation,
+body.light-theme .nav-list {
+  background-color: #f6f8fa !important;
+}
+
+body.light-theme .nav-list-item .nav-list-link {
+  color: #24292f !important;
+}
+
+body.light-theme .nav-list-item .nav-list-link:hover {
+  background-color: #ffffff !important;
+}
+
+/* Smooth transitions for theme switching */
+body, .side-bar, .main-content-wrap, .site-header, .search-input, .search-results, .navigation, .nav-list {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  const body = document.body;
+  
+  // Get saved theme or default to dark (to match just-the-docs dark theme)
+  const savedTheme = localStorage.getItem('docs-theme') || 'dark';
+  
+  // Apply saved theme
+  if (savedTheme === 'light') {
+    body.classList.add('light-theme');
+  }
+  updateIcon(savedTheme);
+  
+  // Toggle theme on click
+  toggle.addEventListener('click', function() {
+    const isLight = body.classList.contains('light-theme');
+    const newTheme = isLight ? 'dark' : 'light';
+    
+    if (newTheme === 'light') {
+      body.classList.add('light-theme');
+    } else {
+      body.classList.remove('light-theme');
+    }
+    
+    localStorage.setItem('docs-theme', newTheme);
+    updateIcon(newTheme);
+  });
+  
+  function updateIcon(theme) {
+    icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+  }
+});
+</script>

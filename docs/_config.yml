@@ -4,6 +4,9 @@ theme: just-the-docs
 
 url: https://rugplayws.gir0fa.com
 
+# Enable color scheme but start with dark
+color_scheme: dark
+
 aux_links:
   GitHub Repo: https://github.com/wbrous/rugplay-ws
   
@@ -22,9 +25,6 @@ nav_sort: case_insensitive
 
 # Footer content
 footer_content: "Copyright &copy; 2025 Rugplay Logger. Distributed under the <a href=\"https://github.com/wbrous/rugplay-ws/blob/main/LICENSE\">GNU License</a>."
-
-# Color scheme
-color_scheme: dark
 
 # Plugins
 plugins:
