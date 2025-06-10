@@ -1,5 +1,6 @@
 import { WebSocketConfig, ExportConfig } from '../types/config';
 import { EventLogger } from '../logger/EventLogger';
+import { WebSocket } from 'ws';
 
 interface RugplayClientOptions {
     config: WebSocketConfig;
@@ -158,7 +159,7 @@ class RugplayClient {
             this.log(`📥 Raw message received:`, event.data);
 
             try {
-                const data = JSON.parse(event.data);
+                const data = JSON.parse(event.data as string);
                 this.log(`📥 Parsed message:`, JSON.stringify(data, null, 2));
                 this.handleMessage(data);
             } catch (error) {
