@@ -1,6 +1,6 @@
 <!-- Dark Mode Toggle Button -->
-<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-  <span id="theme-icon">🌙</span>
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #7c3aed; border: none; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 9999; color: white;">
+  <span id="theme-icon" style="pointer-events: none;">🌙</span>
 </button>
 
 <style>
@@ -132,44 +132,99 @@ html.light-theme .theme-toggle:hover {
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggle = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-icon');
-  const html = document.documentElement;
+// Debug: Check if script loads
+console.log('Script loading...');
+
+// Use a more aggressive approach that doesn't wait for DOMContentLoaded
+(function() {
+  console.log('IIFE executed');
   
-  console.log('Theme toggle loaded'); // Debug log
-  
-  // Get saved theme or default to dark
-  const savedTheme = localStorage.getItem('docs-theme') || 'dark';
-  console.log('Saved theme:', savedTheme); // Debug log
-  
-  // Apply saved theme
-  if (savedTheme === 'light') {
-    html.classList.add('light-theme');
-  }
-  updateIcon(savedTheme);
-  
-  // Toggle theme on click
-  toggle.addEventListener('click', function() {
-    console.log('Toggle clicked'); // Debug log
-    const isLight = html.classList.contains('light-theme');
-    const newTheme = isLight ? 'dark' : 'light';
+  function initializeThemeToggle() {
+    console.log('Initializing theme toggle...');
     
-    console.log('Current theme:', isLight ? 'light' : 'dark', 'New theme:', newTheme); // Debug log
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const html = document.documentElement;
     
-    if (newTheme === 'light') {
-      html.classList.add('light-theme');
-    } else {
-      html.classList.remove('light-theme');
+    console.log('Elements found:', {
+      toggle: !!toggle,
+      icon: !!icon,
+      html: !!html
+    });
+    
+    if (!toggle || !icon) {
+      console.error('Theme toggle elements not found!');
+      return;
     }
     
-    localStorage.setItem('docs-theme', newTheme);
-    updateIcon(newTheme);
-  });
-  
-  function updateIcon(theme) {
-    console.log('Updating icon for theme:', theme); // Debug log
-    icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    console.log('Theme toggle elements found successfully');
+    
+    // Get saved theme or default to dark
+    const savedTheme = localStorage.getItem('docs-theme') || 'dark';
+    console.log('Saved theme:', savedTheme);
+    
+    // Apply saved theme immediately
+    if (savedTheme === 'light') {
+      html.classList.add('light-theme');
+      console.log('Applied light theme class');
+    } else {
+      html.classList.remove('light-theme');
+      console.log('Removed light theme class');
+    }
+    updateIcon(savedTheme);
+    
+    // Add click event with multiple event listeners for debugging
+    toggle.onclick = function(e) {
+      console.log('Toggle clicked via onclick!', e);
+      handleToggle();
+    };
+    
+    toggle.addEventListener('click', function(e) {
+      console.log('Toggle clicked via addEventListener!', e);
+      handleToggle();
+    });
+    
+    function handleToggle() {
+      console.log('Handle toggle called');
+      const isLight = html.classList.contains('light-theme');
+      const newTheme = isLight ? 'dark' : 'light';
+      
+      console.log('Current theme:', isLight ? 'light' : 'dark', 'New theme:', newTheme);
+      console.log('HTML classes before:', html.className);
+      
+      if (newTheme === 'light') {
+        html.classList.add('light-theme');
+      } else {
+        html.classList.remove('light-theme');
+      }
+      
+      console.log('HTML classes after:', html.className);
+      
+      localStorage.setItem('docs-theme', newTheme);
+      updateIcon(newTheme);
+    }
+    
+    function updateIcon(theme) {
+      console.log('Updating icon for theme:', theme);
+      if (icon) {
+        const newIcon = theme === 'dark' ? '☀️' : '🌙';
+        icon.textContent = newIcon;
+        console.log('Icon updated to:', newIcon);
+      }
+    }
+    
+    // Test the toggle immediately
+    console.log('Theme toggle initialized successfully');
   }
-});
+  
+  // Try multiple initialization methods
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeThemeToggle);
+  } else {
+    initializeThemeToggle();
+  }
+  
+  // Also try after a short delay
+  setTimeout(initializeThemeToggle, 100);
+})();
 </script>
