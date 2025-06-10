@@ -25,16 +25,36 @@ client.on('update', (event) => {
   console.log('🔄 Update event:', event);
 });
 
-client.connect().then(() => {
-  console.log('✅ SDK test successful - connected via SDK');
-  
-  // Disconnect after 10 seconds
-  setTimeout(() => {
-    client.disconnect();
-    console.log('🏁 SDK test completed');
-    process.exit(0);
-  }, 10000);
-}).catch((error) => {
-  console.error('❌ SDK test failed:', error);
-  process.exit(1);
+// Listen for connection events instead of using connect().then()
+let connected = false;
+let connectionTimeout;
+
+client.on('message', (data) => {
+  if (!connected) {
+    connected = true;
+    console.log('✅ SDK test successful - connected via SDK');
+    
+    // Clear the timeout since we connected
+    if (connectionTimeout) {
+      clearTimeout(connectionTimeout);
+    }
+    
+    // Disconnect after 5 seconds
+    setTimeout(() => {
+      client.disconnect();
+      console.log('🏁 SDK test completed');
+      process.exit(0);
+    }, 5000);
+  }
 });
+
+// Call connect (it doesn't return a promise)
+client.connect();
+
+// Set a timeout to fail the test if no connection is established
+connectionTimeout = setTimeout(() => {
+  if (!connected) {
+    console.error('❌ SDK test failed: Connection timeout');
+    process.exit(1);
+  }
+}, 15000); // 15 second timeout
