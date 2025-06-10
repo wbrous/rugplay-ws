@@ -1,0 +1,38 @@
+name: Export Tests
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "docs/**"
+  pull_request:
+    paths-ignore:
+      - "docs/**"
+
+jobs:
+  test-exports:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build
+        run: npm run build
+      
+      - name: Run JSON Export tests
+        run: npm run test:export:json
+      
+      - name: Run CSV Export tests
+        run: npm run test:export:csv
+      
+      - name: Run YAML Export tests
+        run: npm run test:export:yaml
