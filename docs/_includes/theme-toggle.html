@@ -1,206 +1,72 @@
-<!-- Dark Mode Toggle Button -->
-<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" style="position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #7c3aed; border: none; border-radius: 25px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 9999; color: white;">
-  <span id="theme-icon" style="pointer-events: none;">🌙</span>
+<!-- Dark Mode Toggle Button using just-the-docs API -->
+<button class="btn js-toggle-dark-mode theme-toggle" aria-label="Toggle theme">
+  <span class="theme-icon">🌙</span>
 </button>
 
 <style>
 .theme-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #7c3aed;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  user-select: none;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 25px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+  user-select: none !important;
+  border: none !important;
+  padding: 0 !important;
+  background: #7c3aed !important;
+  color: white !important;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4);
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4) !important;
 }
 
 .theme-toggle:active {
-  transform: scale(0.95);
+  transform: scale(0.95) !important;
 }
 
-/* Light theme - override all the theme variables aggressively */
-html.light-theme,
-html.light-theme body {
-  background: #ffffff !important;
-  color: #24292f !important;
-}
-
-html.light-theme .side-bar {
-  background: #f6f8fa !important;
-  border-right: 1px solid #d1d9e0 !important;
-}
-
-html.light-theme .site-header {
-  background: #ffffff !important;
-  border-bottom: 1px solid #d1d9e0 !important;
-}
-
-html.light-theme .site-title {
-  color: #24292f !important;
-}
-
-html.light-theme .main-content-wrap,
-html.light-theme .main-content {
-  background: #ffffff !important;
-  color: #24292f !important;
-}
-
-html.light-theme .search-input {
-  background: #ffffff !important;
-  border: 1px solid #d1d9e0 !important;
-  color: #24292f !important;
-}
-
-html.light-theme .search-results {
-  background: #ffffff !important;
-  border: 1px solid #d1d9e0 !important;
-}
-
-html.light-theme .nav-list .nav-list-item .nav-list-link {
-  color: #24292f !important;
-}
-
-html.light-theme .nav-list .nav-list-item .nav-list-link:hover {
-  background: #e5e7eb !important;
-}
-
-html.light-theme .nav-list .nav-list-item .nav-list-link.active {
-  background: #dbeafe !important;
-  color: #1e40af !important;
-}
-
-html.light-theme code {
-  background: #f6f8fa !important;
-  color: #24292f !important;
-}
-
-html.light-theme pre {
-  background: #f6f8fa !important;
-}
-
-html.light-theme blockquote {
-  color: #656d76 !important;
-  border-left: 3px solid #d1d9e0 !important;
-}
-
-html.light-theme h1, 
-html.light-theme h2, 
-html.light-theme h3, 
-html.light-theme h4, 
-html.light-theme h5, 
-html.light-theme h6 {
-  color: #24292f !important;
-}
-
-html.light-theme a {
-  color: #0969da !important;
-}
-
-html.light-theme a:hover {
-  color: #0550ae !important;
-}
-
-html.light-theme .theme-toggle {
-  background-color: #24292f;
-  color: #fbbf24;
-  box-shadow: 0 4px 12px rgba(36, 41, 47, 0.3);
-}
-
-html.light-theme .theme-toggle:hover {
-  box-shadow: 0 6px 16px rgba(36, 41, 47, 0.4);
-}
-
-/* Smooth transitions for theme switching */
-* {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+.theme-icon {
+  pointer-events: none;
 }
 </style>
 
 <script>
-console.log('Script loading...');
-
-(function() {
-  console.log('IIFE executed');
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+  const icon = document.querySelector('.theme-icon');
   
-  function initializeThemeToggle() {
-    
-    const toggle = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const html = document.documentElement;
-    
-    console.log('Elements found:', {
-      toggle: !!toggle,
-      icon: !!icon,
-      html: !!html
-    });
-    
-    if (!toggle || !icon) {
-      console.error('Theme toggle elements not found!');
-      return;
-    }
-    
-    const savedTheme = localStorage.getItem('docs-theme') || 'dark';
-    
-    if (savedTheme === 'light') {
-      html.classList.add('light-theme');
-    } else {
-      html.classList.remove('light-theme');
-    }
-    updateIcon(savedTheme);
-    
-    toggle.onclick = function(e) {
-      handleToggle();
-    };
-    
-    toggle.addEventListener('click', function(e) {
-      handleToggle();
-    });
-    
-    function handleToggle() {
-      console.log('Handle toggle called');
-      const isLight = html.classList.contains('light-theme');
-      const newTheme = isLight ? 'dark' : 'light';
-      
-      if (newTheme === 'light') {
-        html.classList.add('light-theme');
+  if (toggleDarkMode && icon && typeof jtd !== 'undefined') {
+    function updateIcon() {
+      if (jtd.getTheme() === 'dark') {
+        icon.textContent = '☀️';
+        toggleDarkMode.style.background = '#fbbf24';
+        toggleDarkMode.style.color = '#1f2937';
       } else {
-        html.classList.remove('light-theme');
-      }
-      
-      localStorage.setItem('docs-theme', newTheme);
-      updateIcon(newTheme);
-    }
-    
-    function updateIcon(theme) {
-      if (icon) {
-        const newIcon = theme === 'dark' ? '☀️' : '🌙';
-        icon.textContent = newIcon;
+        icon.textContent = '🌙';
+        toggleDarkMode.style.background = '#7c3aed';
+        toggleDarkMode.style.color = 'white';
       }
     }
     
+    updateIcon();
+    
+    jtd.addEvent(toggleDarkMode, 'click', function(){
+      if (jtd.getTheme() === 'dark') {
+        jtd.setTheme('light');
+      } else {
+        jtd.setTheme('dark');
+      }
+      updateIcon();
+    });
   }
-  
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeThemeToggle);
-  } else {
-    initializeThemeToggle();
-  }
-
-  setTimeout(initializeThemeToggle, 100);
-})();
+});
 </script>
