@@ -4,7 +4,7 @@ theme: just-the-docs
 
 url: https://rugplayws.gir0fa.com
 
-# Enable color scheme but start with dark
+# Dark theme
 color_scheme: dark
 
 aux_links:

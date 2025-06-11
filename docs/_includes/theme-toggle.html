@@ -1,0 +1,72 @@
+<!-- Dark Mode Toggle Button using just-the-docs API -->
+<button class="btn js-toggle-dark-mode theme-toggle" aria-label="Toggle theme">
+  <span class="theme-icon">🌙</span>
+</button>
+
+<style>
+.theme-toggle {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 25px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+  user-select: none !important;
+  border: none !important;
+  padding: 0 !important;
+  background: #7c3aed !important;
+  color: white !important;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4) !important;
+}
+
+.theme-toggle:active {
+  transform: scale(0.95) !important;
+}
+
+.theme-icon {
+  pointer-events: none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+  const icon = document.querySelector('.theme-icon');
+  
+  if (toggleDarkMode && icon && typeof jtd !== 'undefined') {
+    function updateIcon() {
+      if (jtd.getTheme() === 'dark') {
+        icon.textContent = '🌙';
+        toggleDarkMode.style.background = '#fbbf24';
+        toggleDarkMode.style.color = '#1f2937';
+      } else {
+        icon.textContent = '☀️';
+        toggleDarkMode.style.background = '#7c3aed';
+        toggleDarkMode.style.color = 'white';
+      }
+    }
+    
+    updateIcon();
+    
+    jtd.addEvent(toggleDarkMode, 'click', function(){
+      if (jtd.getTheme() === 'dark') {
+        jtd.setTheme('light');
+      } else {
+        jtd.setTheme('dark');
+      }
+      updateIcon();
+    });
+  }
+});
+</script>
