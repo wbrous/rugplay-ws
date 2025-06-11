@@ -52,7 +52,7 @@ These runners work on Windows, macOS, and Linux.
 ## GitHub Actions
 
 Automated tests run on:
-- Every push to `main` or `develop` branches
+- Every push to `main` or `dev` branches
 - Pull requests
 - Manual workflow dispatch
 - Scheduled runs every 6 hours (SDK connectivity test)
