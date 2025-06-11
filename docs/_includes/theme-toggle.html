@@ -132,15 +132,12 @@ html.light-theme .theme-toggle:hover {
 </style>
 
 <script>
-// Debug: Check if script loads
 console.log('Script loading...');
 
-// Use a more aggressive approach that doesn't wait for DOMContentLoaded
 (function() {
   console.log('IIFE executed');
   
   function initializeThemeToggle() {
-    console.log('Initializing theme toggle...');
     
     const toggle = document.getElementById('theme-toggle');
     const icon = document.getElementById('theme-icon');
@@ -157,30 +154,20 @@ console.log('Script loading...');
       return;
     }
     
-    console.log('Theme toggle elements found successfully');
-    
-    // Get saved theme or default to dark
     const savedTheme = localStorage.getItem('docs-theme') || 'dark';
-    console.log('Saved theme:', savedTheme);
     
-    // Apply saved theme immediately
     if (savedTheme === 'light') {
       html.classList.add('light-theme');
-      console.log('Applied light theme class');
     } else {
       html.classList.remove('light-theme');
-      console.log('Removed light theme class');
     }
     updateIcon(savedTheme);
     
-    // Add click event with multiple event listeners for debugging
     toggle.onclick = function(e) {
-      console.log('Toggle clicked via onclick!', e);
       handleToggle();
     };
     
     toggle.addEventListener('click', function(e) {
-      console.log('Toggle clicked via addEventListener!', e);
       handleToggle();
     });
     
@@ -189,42 +176,31 @@ console.log('Script loading...');
       const isLight = html.classList.contains('light-theme');
       const newTheme = isLight ? 'dark' : 'light';
       
-      console.log('Current theme:', isLight ? 'light' : 'dark', 'New theme:', newTheme);
-      console.log('HTML classes before:', html.className);
-      
       if (newTheme === 'light') {
         html.classList.add('light-theme');
       } else {
         html.classList.remove('light-theme');
       }
       
-      console.log('HTML classes after:', html.className);
-      
       localStorage.setItem('docs-theme', newTheme);
       updateIcon(newTheme);
     }
     
     function updateIcon(theme) {
-      console.log('Updating icon for theme:', theme);
       if (icon) {
         const newIcon = theme === 'dark' ? '☀️' : '🌙';
         icon.textContent = newIcon;
-        console.log('Icon updated to:', newIcon);
       }
     }
     
-    // Test the toggle immediately
-    console.log('Theme toggle initialized successfully');
   }
   
-  // Try multiple initialization methods
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeThemeToggle);
   } else {
     initializeThemeToggle();
   }
-  
-  // Also try after a short delay
+
   setTimeout(initializeThemeToggle, 100);
 })();
 </script>
