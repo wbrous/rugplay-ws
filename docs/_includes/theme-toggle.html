@@ -45,6 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const icon = document.querySelector('.theme-icon');
   
   if (toggleDarkMode && icon && typeof jtd !== 'undefined') {
+    const savedTheme = localStorage.getItem('jtd-theme');
+    if (savedTheme) {
+      jtd.setTheme(savedTheme);
+    }
+    
     function updateIcon() {
       if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
         icon.textContent = '🌙';
@@ -60,11 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
     updateIcon();
     
     jtd.addEvent(toggleDarkMode, 'click', function(){
+      let newTheme;
       if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
+        newTheme = 'light';
         jtd.setTheme('light');
       } else {
+        newTheme = 'dark';
         jtd.setTheme('dark');
       }
+      localStorage.setItem('jtd-theme', newTheme);
+      
       updateIcon();
     });
   }
