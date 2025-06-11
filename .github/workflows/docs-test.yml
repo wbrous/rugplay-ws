@@ -1,4 +1,4 @@
-name: Jekyll Build Tests
+name: CI for Jekyll Documentation
 
 on:
   push:

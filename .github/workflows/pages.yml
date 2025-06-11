@@ -4,7 +4,7 @@
 # documentation.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy to GH Pages
+name: CD Docs to GitHub Pages
 
 on:
   push:
@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   # Build job
-  build:
+  build-jekyll:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -58,12 +58,12 @@ jobs:
           path: docs/_site/
 
   # Deployment job
-  deploy:
+  deploy-to-pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-jekyll 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

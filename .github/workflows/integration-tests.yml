@@ -1,4 +1,4 @@
-name: Integration Tests
+name: CI for Exports and SDK
 
 on:
   push:
