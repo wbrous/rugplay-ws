@@ -4,6 +4,9 @@ theme: just-the-docs
 
 url: https://rugplayws.gir0fa.com
 
+# Dark theme
+color_scheme: dark
+
 aux_links:
   GitHub Repo: https://github.com/wbrous/rugplay-ws
   
