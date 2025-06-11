@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (toggleDarkMode && icon && typeof jtd !== 'undefined') {
     function updateIcon() {
-      if (jtd.getTheme() === 'dark') {
+      if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
         icon.textContent = '🌙';
         toggleDarkMode.style.background = '#fbbf24';
         toggleDarkMode.style.color = '#1f2937';
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateIcon();
     
     jtd.addEvent(toggleDarkMode, 'click', function(){
-      if (jtd.getTheme() === 'dark') {
+      if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
         jtd.setTheme('light');
       } else {
         jtd.setTheme('dark');
