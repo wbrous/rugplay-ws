@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ExportConfig } from "../types/config";
 
 const exportConfig: ExportConfig = {

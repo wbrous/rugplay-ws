@@ -1,3 +1,4 @@
+// @ts-ignore
 import { WebSocketConfig } from '../types/config';
 
 const webSocketConfig: WebSocketConfig = {
