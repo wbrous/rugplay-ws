@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
   if (toggleDarkMode && icon && typeof jtd !== 'undefined') {
     function updateIcon() {
       if (jtd.getTheme() === 'dark') {
-        icon.textContent = '☀️';
+        icon.textContent = '🌙';
         toggleDarkMode.style.background = '#fbbf24';
         toggleDarkMode.style.color = '#1f2937';
       } else {
-        icon.textContent = '🌙';
+        icon.textContent = '☀️';
         toggleDarkMode.style.background = '#7c3aed';
         toggleDarkMode.style.color = 'white';
       }
