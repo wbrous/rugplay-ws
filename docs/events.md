@@ -225,32 +225,6 @@ client.on('new-token', (data) => {
 
 ## Alert Events
 
-### rug-alert
-
-Fired when suspicious activity is detected (potential rug pull).
-
-```typescript
-client.on('rug-alert', (data) => {
-    console.warn('Rug pull alert:', data);
-});
-```
-
-**Data Structure**:
-```typescript
-{
-    symbol: string;         // Token symbol
-    name: string;           // Token name
-    alertType: 'liquidity-removal' | 'large-sell' | 'contract-renounced';
-    severity: 'low' | 'medium' | 'high' | 'critical';
-    details: {
-        liquidityRemoved?: number;  // Amount of liquidity removed
-        sellAmount?: number;        // Large sell amount
-        seller?: string;            // Seller username
-    };
-    timestamp: number;      // Alert timestamp
-}
-```
-
 ### whale-alert
 
 Fired for large trades (whale movements).

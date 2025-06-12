@@ -330,9 +330,9 @@ class RugplayClient {
                     this.triggerEvent(`trade:${eventData.coinSymbol.toLowerCase()}`, eventData);
                 }
                 
-                // Trigger large trade events (over $1000)
-                if (eventData.totalValue && eventData.totalValue > 1000) {
-                    this.triggerEvent('large-trade', eventData);
+                // Trigger whale trade events (over $100000)
+                if (eventData.totalValue && eventData.totalValue >= 100000) {
+                    this.triggerEvent('whale-trade', eventData);
                 }
                 
                 break;
@@ -366,10 +366,10 @@ class RugplayClient {
      * Categorize trade size for metadata
      */
     private categorizeTradeSize(totalValue: number): string {
-        if (totalValue >= 10000) return 'whale';
-        if (totalValue >= 1000) return 'large';
-        if (totalValue >= 100) return 'medium';
-        if (totalValue >= 10) return 'small';
+        if (totalValue >= 100000) return 'whale';
+        if (totalValue >= 10000) return 'large';
+        if (totalValue >= 1000) return 'medium';
+        if (totalValue >= 100) return 'small';
         return 'micro';
     }
 
