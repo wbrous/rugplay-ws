@@ -8,35 +8,155 @@
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
-  width: 50px !important;
-  height: 50px !important;
-  border-radius: 25px !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 28px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-size: 18px !important;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3) !important;
-  transition: all 0.3s ease !important;
+  font-size: 22px !important;
+  border: 3px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   z-index: 1000 !important;
   user-select: none !important;
-  border: none !important;
   padding: 0 !important;
-  background: #7c3aed !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Dark theme styles (default) */
+.theme-toggle {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%) !important;
   color: white !important;
+  box-shadow: 
+    0 8px 25px rgba(99, 102, 241, 0.4),
+    0 4px 12px rgba(139, 92, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.05) !important;
-  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.4) !important;
+  transform: scale(1.08) rotate(5deg) !important;
+  box-shadow: 
+    0 12px 35px rgba(99, 102, 241, 0.5),
+    0 6px 20px rgba(139, 92, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .theme-toggle:active {
-  transform: scale(0.95) !important;
+  transform: scale(0.95) rotate(-2deg) !important;
+  transition: all 0.15s ease !important;
 }
 
-.theme-icon {
-  pointer-events: none;
+/* Light theme styles */
+.theme-toggle.light-mode {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%) !important;
+  color: #1f2937 !important;
+  border-color: rgba(31, 41, 55, 0.1) !important;
+  box-shadow: 
+    0 8px 25px rgba(251, 191, 36, 0.4),
+    0 4px 12px rgba(245, 158, 11, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
 }
+
+.theme-toggle.light-mode:hover {
+  transform: scale(1.08) rotate(-5deg) !important;
+  box-shadow: 
+    0 12px 35px rgba(251, 191, 36, 0.5),
+    0 6px 20px rgba(245, 158, 11, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+  border-color: rgba(31, 41, 55, 0.2) !important;
+}
+
+.theme-toggle.light-mode:active {
+  transform: scale(0.95) rotate(2deg) !important;
+}
+
+/* Icon animation */
+.theme-icon {
+  pointer-events: none !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-block !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) !important;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: scale(1.1) !important;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* Rotating glow effect */
+.theme-toggle::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -2px !important;
+  left: -2px !important;
+  right: -2px !important;
+  bottom: -2px !important;
+  border-radius: 30px !important;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(99, 102, 241, 0.4) 90deg,
+    rgba(139, 92, 246, 0.4) 180deg,
+    rgba(217, 70, 239, 0.4) 270deg,
+    transparent 360deg
+  ) !important;
+  z-index: -1 !important;
+  animation: rotate 3s linear infinite !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.theme-toggle:hover::before {
+  opacity: 1 !important;
+}
+
+.theme-toggle.light-mode::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(251, 191, 36, 0.4) 90deg,
+    rgba(245, 158, 11, 0.4) 180deg,
+    rgba(217, 119, 6, 0.4) 270deg,
+    transparent 360deg
+  ) !important;
+}
+
+/* Pulse animation for theme change */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.theme-toggle.changing {
+  animation: pulse 0.6s ease-in-out !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 25px !important;
+    font-size: 20px !important;
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+  
+  .theme-toggle::before {
+    border-radius: 27px !important;
+  }
+}
+</style>
 </style>
 
 <script>
@@ -51,15 +171,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateIcon() {
+      // Add changing animation
+      toggleDarkMode.classList.add('changing');
+      
       if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
-        icon.textContent = '🌙';
-        toggleDarkMode.style.background = '#fbbf24';
-        toggleDarkMode.style.color = '#1f2937';
-      } else {
         icon.textContent = '☀️';
-        toggleDarkMode.style.background = '#7c3aed';
-        toggleDarkMode.style.color = 'white';
+        toggleDarkMode.classList.remove('light-mode');
+        // Remove any inline styles to let CSS take over
+        toggleDarkMode.style.background = '';
+        toggleDarkMode.style.color = '';
+      } else {
+        icon.textContent = '🌙';
+        toggleDarkMode.classList.add('light-mode');
+        // Remove any inline styles to let CSS take over
+        toggleDarkMode.style.background = '';
+        toggleDarkMode.style.color = '';
       }
+      
+      // Remove changing animation after completion
+      setTimeout(() => {
+        toggleDarkMode.classList.remove('changing');
+      }, 600);
     }
     
     updateIcon();
