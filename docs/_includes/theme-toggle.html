@@ -18,12 +18,13 @@
   border: 3px solid rgba(255, 255, 255, 0.2) !important;
   backdrop-filter: blur(10px) !important;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  z-index: 1000 !important;
+  z-index: 9999 !important;
   user-select: none !important;
   padding: 0 !important;
   cursor: pointer !important;
   overflow: hidden !important;
-  position: relative !important;
+  top: auto !important;
+  left: auto !important;
 }
 
 /* Dark theme styles (default) */
@@ -171,24 +172,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateIcon() {
-      // Add changing animation
       toggleDarkMode.classList.add('changing');
       
       if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
         icon.textContent = '☀️';
         toggleDarkMode.classList.remove('light-mode');
-        // Remove any inline styles to let CSS take over
         toggleDarkMode.style.background = '';
         toggleDarkMode.style.color = '';
       } else {
         icon.textContent = '🌙';
         toggleDarkMode.classList.add('light-mode');
-        // Remove any inline styles to let CSS take over
         toggleDarkMode.style.background = '';
         toggleDarkMode.style.color = '';
       }
       
-      // Remove changing animation after completion
       setTimeout(() => {
         toggleDarkMode.classList.remove('changing');
       }, 600);
