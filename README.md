@@ -144,7 +144,7 @@ node tests/test-sdk.js
 
 ## 📚 Documentation
 
-Documentation as raw markdown is stored in the [dist/](./dist) directory, but formatted documentation can be found at our [current GitHub Pages deployment](https://rugplayws.gir0fa.com) (rugplayws.gir0fa.com).
+Documentation as raw markdown is stored in the [docs/](./docs) directory, but formatted documentation can be found at our [current GitHub Pages deployment](https://rugplayws.gir0fa.com) (rugplayws.gir0fa.com).
 
 ---
 
