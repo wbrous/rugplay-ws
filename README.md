@@ -144,9 +144,7 @@ node tests/test-sdk.js
 
 ## 📚 Documentation
 
-- 📖 [SDK Usage Guide](./docs/SDK_USAGE.md)
-- 📢 [Enhanced Events](./docs/ENHANCED_EVENT_HANDLER.md)
-- 🔔 [Discord Setup](./docs/DISCORD_SETUP.md)
+Documentation as raw markdown is stored in the [dist/](./dist) directory, but formatted documentation can be found at our [current GitHub Pages deployment](https://rugplayws.gir0fa.com) (rugplayws.gir0fa.com).
 
 ---
 
