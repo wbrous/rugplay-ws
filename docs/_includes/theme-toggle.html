@@ -175,12 +175,12 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleDarkMode.classList.add('changing');
       
       if (jtd.getTheme() === 'dark' || jtd.getTheme() === "default") {
-        icon.textContent = '☀️';
+        icon.textContent = '🌙';
         toggleDarkMode.classList.remove('light-mode');
         toggleDarkMode.style.background = '';
         toggleDarkMode.style.color = '';
       } else {
-        icon.textContent = '🌙';
+        icon.textContent = '☀️';
         toggleDarkMode.classList.add('light-mode');
         toggleDarkMode.style.background = '';
         toggleDarkMode.style.color = '';
